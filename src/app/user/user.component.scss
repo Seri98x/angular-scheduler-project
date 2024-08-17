@@ -3,7 +3,10 @@ div {
     overflow: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+   
+    font-family: "Kanit", sans-serif;
+    font-weight: 200;
+    font-style: italic;
   }
 
   ion-button {
@@ -13,6 +16,7 @@ div {
   }
   
   button {
+    
     display: flex;
     align-items: center;
     gap: 0.5rem;
