@@ -3,7 +3,8 @@
    
 }
 ion-col {
-    background-image: linear-gradient(0deg, #A100FFFF 0%, #71C4FFFF 100%);
+    background-color: rgba(144, 129, 228, 0.75);
+   
     color: #fff;
     text-align: center;
     border-radius: 3px;
@@ -12,4 +13,5 @@ ion-col {
     &:first-child {
         margin-right: 2rem;
     }
+
   }
