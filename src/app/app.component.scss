@@ -3,12 +3,12 @@
    
 }
 ion-col {
-    background-color: rgba(144, 129, 228, 0.75);
+ 
    
     color: #fff;
     text-align: center;
     border-radius: 3px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+
 
     &:first-child {
         margin-right: 2rem;
@@ -24,4 +24,9 @@ ion-col {
             margin-bottom: 2rem;
         }
     }
+}
+
+.users {
+    list-style: none;
+    padding: 0;
 }
