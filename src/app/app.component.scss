@@ -12,6 +12,16 @@ ion-col {
 
     &:first-child {
         margin-right: 2rem;
+
     }
 
   }
+
+
+  @media screen and (max-width: 767px) {
+    ion-col {
+        &:first-child {
+            margin-bottom: 2rem;
+        }
+    }
+}
