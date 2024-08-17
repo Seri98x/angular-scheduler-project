@@ -1,26 +1,72 @@
-import { Component, OnInit } from '@angular/core';
-import { IonButton } from '@ionic/angular/standalone';
+import { Component, OnInit, Input } from '@angular/core';
+import { IonButton,IonActionSheet, ActionSheetController } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports:[IonButton],
+  imports:[IonButton,IonActionSheet],
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent  implements OnInit {
+  @Input() avatar!:string;
+  @Input() name!:string;
+  @Input() id!:string;
 
-  public name?:string;
-  constructor() 
+
+  constructor(private actionSheetController: ActionSheetController) 
   { 
-    this.name = "testing lang";
+
   }
+
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Choose an Option',
+      buttons: [
+        {
+          text: 'Option 1',
+          icon: 'add',
+          handler: () => {
+            console.log(this.name);
+          }
+        },
+        {
+          text: 'Option 2',
+          icon: 'arrow-forward',
+          handler: () => {
+            console.log('Option 2 clicked');
+          }
+        },
+        {
+          text: 'Cancel',
+          icon: 'close',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    await actionSheet.present();
+  }
+
+
+ 
 
   ngOnInit() {}
 
   logUserDetails(){
     console.log(this.name);
 
+  }
+
+  onButtonClick() {
+    this.presentActionSheet();
+  }
+  
+  
+  get userImage(){
+    return "assets/users/" + this.avatar;
   }
 
 }
