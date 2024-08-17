@@ -12,10 +12,11 @@
     
              <ion-row>
                 <ion-col size="12" size-md="auto" >
+                   
                     <ul class="users" >
     
                         <li *ngFor="let user of users">
-                            <app-user [name]="user.name" [avatar]="user.avatar" ></app-user>
+                            <app-user [id]="user.id"[name]="user.name" [avatar]="user.avatar" (select)="onSelectUser($event)" ></app-user>
                         </li>
                     </ul>
                 </ion-col>

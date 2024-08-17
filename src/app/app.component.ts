@@ -42,5 +42,10 @@ export class AppComponent  {
     },
   ];
 
+  onSelectUser(id:string){
+    console.log(id);
+
+  }
+
   title = 'angular-scheduler-project';
 }

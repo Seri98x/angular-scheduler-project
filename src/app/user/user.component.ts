@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { IonButton,IonActionSheet, ActionSheetController } from '@ionic/angular/standalone';
 
 @Component({
@@ -12,7 +12,7 @@ export class UserComponent  implements OnInit {
   @Input({required:true}) avatar!:string;
   @Input({required:true}) name!:string;
   @Input({required:true}) id!:string;
-
+  @Output() select = new EventEmitter();
 
   constructor(private actionSheetController: ActionSheetController) 
   { 
@@ -27,7 +27,7 @@ export class UserComponent  implements OnInit {
           text: 'Option 1',
           icon: 'add',
           handler: () => {
-            console.log(this.name);
+            this.select.emit(this.id);
           }
         },
         {
