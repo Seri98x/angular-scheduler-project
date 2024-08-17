@@ -56,7 +56,7 @@ export class UserComponent  implements OnInit {
   ngOnInit() {}
 
   logUserDetails(){
-    console.log(this.name);
+    this.select.emit(this.id);
 
   }
 

@@ -1,3 +1,54 @@
+:root {
+  --ion-color-completed: #88D66C;
+  --ion-color-completed-rgb: 254, 205, 211;
+  --ion-color-completed-contrast: #000000;
+  --ion-color-completed-contrast-rgb: 0, 0, 0;
+  --ion-color-completed-shade: #7ac161;
+  --ion-color-completed-tint: #c4ebb6;
+
+  --ion-color-ongoing: #FFDA76;
+  --ion-color-ongoing-rgb: 254, 205, 211;
+  --ion-color-ongoing-contrast: #000000;
+  --ion-color-ongoing-contrast-rgb: 0, 0, 0;
+  --ion-color-ongoing-shade: #e6c46a;
+  --ion-color-ongoing-tint: #ffedbb;
+
+  --ion-color-deleted: #FF4E88;
+  --ion-color-deleted-rgb: 254, 205, 211;
+  --ion-color-deleted-contrast: #000000;
+  --ion-color-deleted-contrast-rgb: 0, 0, 0;
+  --ion-color-deleted-shade: #e6467a;
+  --ion-color-deleted-tint: #ffb8cf;
+}
+
+.ion-color-completed {
+  --ion-color-base: var(--ion-color-completed);
+  --ion-color-base-rgb: var(--ion-color-completed-rgb);
+  --ion-color-contrast: var(--ion-color-completed-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-completed-contrast-rgb);
+  --ion-color-shade: var(--ion-color-completed-shade);
+  --ion-color-tint: var(--ion-color-completed-tint);
+}
+
+.ion-color-ongoing {
+  --ion-color-base: var(--ion-color-ongoing);
+  --ion-color-base-rgb: var(--ion-color-ongoing-rgb);
+  --ion-color-contrast: var(--ion-color-ongoing-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-ongoing-contrast-rgb);
+  --ion-color-shade: var(--ion-color-ongoing-shade);
+  --ion-color-tint: var(--ion-color-ongoing-tint);
+}
+
+.ion-color-deleted {
+  --ion-color-base: var(--ion-color-deleted);
+  --ion-color-base-rgb: var(--ion-color-deleted-rgb);
+  --ion-color-contrast: var(--ion-color-deleted-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-deleted-contrast-rgb);
+  --ion-color-shade: var(--ion-color-deleted-shade);
+  --ion-color-tint: var(--ion-color-deleted-tint);
+}
+
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
