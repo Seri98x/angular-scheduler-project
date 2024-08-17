@@ -9,9 +9,9 @@ import { IonButton,IonActionSheet, ActionSheetController } from '@ionic/angular/
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent  implements OnInit {
-  @Input() avatar!:string;
-  @Input() name!:string;
-  @Input() id!:string;
+  @Input({required:true}) avatar!:string;
+  @Input({required:true}) name!:string;
+  @Input({required:true}) id!:string;
 
 
   constructor(private actionSheetController: ActionSheetController) 

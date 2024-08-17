@@ -1,6 +1,15 @@
 div {
     border-radius: 6px;
     overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ion-button {
+    margin-left: 1rem;
+    height: 50px;
+    --background: grey;
   }
   
   button {
