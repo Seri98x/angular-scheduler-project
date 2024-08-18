@@ -4,12 +4,12 @@
       <ion-label class="ion-label-text">Completed Task/s</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content"><ion-list [inset]="true">
-      <ion-item [button]="true" detail="false">
+      <ion-item [button]="true" (click)="testClick()" detail="false">
         <div class="unread-indicator-wrapper" slot="start">
           <div class="unread-indicator"></div>
         </div>
         <ion-label>
-          <strong>Rick Astley</strong>
+          <strong>{{sample}}</strong>
           <ion-text>Never Gonna Give You Up</ion-text><br />
           <ion-note color="medium" class="ion-text-wrap">
             Never gonna give you up Never gonna let you down Never gonna run...

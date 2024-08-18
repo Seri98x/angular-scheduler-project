@@ -23,4 +23,8 @@ export class TasksComponent  implements OnInit {
 
   ngOnInit() {}
 
+  testClick(){
+    console.log("tae");
+  }
+
 }
