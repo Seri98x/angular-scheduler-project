@@ -11,7 +11,9 @@
     
     
              <ion-row>
+            
                 <ion-col size="12" size-md="auto" >
+                    <p class="ion-label-user-list-header">Users</p>
                     <ul class="users" >
                         <li *ngFor="let user of users">
                             <app-user [id]="user.id"[name]="user.name" [avatar]="user.avatar" (select)="onSelectUser($event)" ></app-user>
@@ -21,7 +23,7 @@
         
                 <ion-col  size="12"  size-md="">
                     <div class="task-container">
-                        <app-tasks></app-tasks>
+                        <app-tasks [sample]="sample!"></app-tasks>
                     </div>
                 </ion-col>
              </ion-row>
