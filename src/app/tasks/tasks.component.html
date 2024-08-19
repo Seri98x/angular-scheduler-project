@@ -1,79 +1,101 @@
-<ion-accordion-group expand="inset">
-  <ion-accordion value="first">
-    <ion-item slot="header" color="completed">
-      <ion-label class="ion-label-text">Completed Task/s</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content"><ion-list [inset]="true">
-      <ion-item [button]="true" (click)="testClick()" detail="false">
-        <div class="unread-indicator-wrapper" slot="start">
-          <div class="unread-indicator"></div>
-        </div>
-        <ion-label>
-          <strong>{{sample}}</strong>
-          <ion-text>Never Gonna Give You Up</ion-text><br />
-          <ion-note color="medium" class="ion-text-wrap">
-            Never gonna give you up Never gonna let you down Never gonna run...
-          </ion-note>
-        </ion-label>
-        <div class="metadata-end-wrapper" slot="end">
-          <ion-note color="medium">06:11</ion-note>
-          <ion-icon color="medium" name="chevron-forward"></ion-icon>
-        </div>
+
+
+
+  <ion-accordion-group expand="inset">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="completed">
+        <ion-label class="ion-label-text">Completed Task/s</ion-label>
       </ion-item>
-      <ion-item [button]="true" detail="false">
-        <div class="unread-indicator-wrapper" slot="start"></div>
-        <ion-label>
-          <strong>Ionitron</strong>
-          <ion-text>I have become sentient</ion-text><br />
-          <ion-note color="medium" class="ion-text-wrap">That is all.</ion-note>
-        </ion-label>
-        <div class="metadata-end-wrapper" slot="end">
-          <ion-note color="medium">03:44</ion-note>
-          <ion-icon color="medium" name="chevron-forward"></ion-icon>
-        </div>
-      </ion-item>
-      <ion-item [button]="true" detail="false">
-        <div class="unread-indicator-wrapper" slot="start">
-          <div class="unread-indicator"></div>
-        </div>
-        <ion-label>
-          <strong>Steam</strong>
-          <ion-text>Game Store Sale</ion-text><br />
-          <ion-note color="medium" class="ion-text-wrap">
-            That game you added to your wish list 2 years ago is now on sale!
-          </ion-note>
-        </ion-label>
-        <div class="metadata-end-wrapper" slot="end">
-          <ion-note color="medium">Yesterday</ion-note>
-          <ion-icon color="medium" name="chevron-forward"></ion-icon>
-        </div>
-      </ion-item>
-      <ion-item [button]="true" detail="false">
-        <div class="unread-indicator-wrapper" slot="start"></div>
-        <ion-label>
-          <strong>Ionic</strong>
-          <ion-text>Announcing Ionic 7.0</ion-text><br />
-          <ion-note color="medium" class="ion-text-wrap">This version is one more than Ionic 6!</ion-note>
-        </ion-label>
-        <div class="metadata-end-wrapper" slot="end">
-          <ion-note color="medium">Yesterday</ion-note>
-          <ion-icon color="medium" name="chevron-forward"></ion-icon>
-        </div>
-      </ion-item>
-    </ion-list></div>
+      
+  
+      <div class="ion-padding" slot="content">
+        
+        <ion-content style="height: 300px;">
+
+    <ion-list [inset]="true">
+  
+        <ion-item [button]="true" (click)="testClick()"  *ngFor="let item of items; let index">
+        
+          <div class="unread-indicator-wrapper" slot="start">
+            <div class="unread-indicator"></div>
+          </div>
+          <ion-label>
+            <strong>{{sample}}</strong>
+            <ion-text>Never Gonna Give You Up</ion-text><br />
+            <ion-note color="medium" class="ion-text-wrap">
+              Never gonna give you up Never gonna let you down Never gonna run...
+            </ion-note>
+          </ion-label>
+          <div class="metadata-end-wrapper" slot="end">
+            <ion-note color="medium">06:11</ion-note>
+            <ion-icon color="medium" name="chevron-forward"></ion-icon>
+          </div>
+        </ion-item>
+        <!-- <ion-item [button]="true" detail="false">
+          <div class="unread-indicator-wrapper" slot="start"></div>
+          <ion-label>
+            <strong>Ionitron</strong>
+            <ion-text>I have become sentient</ion-text><br />
+            <ion-note color="medium" class="ion-text-wrap">That is all.</ion-note>
+          </ion-label>
+          <div class="metadata-end-wrapper" slot="end">
+            <ion-note color="medium">03:44</ion-note>
+            <ion-icon color="medium" name="chevron-forward"></ion-icon>
+          </div>
+        </ion-item>
+        <ion-item [button]="true" detail="false">
+          <div class="unread-indicator-wrapper" slot="start">
+            <div class="unread-indicator"></div>
+          </div>
+          <ion-label>
+            <strong>Steam</strong>
+            <ion-text>Game Store Sale</ion-text><br />
+            <ion-note color="medium" class="ion-text-wrap">
+              That game you added to your wish list 2 years ago is now on sale!
+            </ion-note>
+          </ion-label>
+          <div class="metadata-end-wrapper" slot="end">
+            <ion-note color="medium">Yesterday</ion-note>
+            <ion-icon color="medium" name="chevron-forward"></ion-icon>
+          </div>
+        </ion-item>
+        <ion-item [button]="true" detail="false">
+          <div class="unread-indicator-wrapper" slot="start"></div>
+          <ion-label>
+            <strong>Ionic</strong>
+            <ion-text>Announcing Ionic 7.0</ion-text><br />
+            <ion-note color="medium" class="ion-text-wrap">This version is one more than Ionic 6!</ion-note>
+          </ion-label>
+          <div class="metadata-end-wrapper" slot="end">
+            <ion-note color="medium">Yesterday</ion-note>
+            <ion-icon color="medium" name="chevron-forward"></ion-icon>
+          </div>
+        </ion-item> -->
+      </ion-list>
+      <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+        <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="bubbles"></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+
+        </ion-content>
+  
+
+     
     
-  </ion-accordion>
-  <ion-accordion value="second">
-    <ion-item slot="header" color="ongoing">
-      <ion-label class="ion-label-text">Ongoing Task/s</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">Second Content</div>
-  </ion-accordion>
-  <ion-accordion value="third">
-    <ion-item slot="header" color="deleted">
-      <ion-label class="ion-label-text" >Deleted Task/s</ion-label>
-    </ion-item>
-    <div class="ion-padding" slot="content">Third Content</div>
-  </ion-accordion>
-</ion-accordion-group>
+        </div>
+      
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="ongoing">
+        <ion-label class="ion-label-text">Ongoing Task/s</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Second Content</div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="deleted">
+        <ion-label class="ion-label-text" >Deleted Task/s</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Third Content</div>
+    </ion-accordion>
+  </ion-accordion-group>
+
 
