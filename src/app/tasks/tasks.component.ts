@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { IonAccordion, IonAccordionGroup, IonItem, IonLabel,IonText,IonNote,IonIcon,IonList,IonInfiniteScroll,IonInfiniteScrollContent, InfiniteScrollCustomEvent,IonContent} from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { chevronForward, listCircle } from 'ionicons/icons';
+import { EllipsisPipe } from '../pipes/ellipsis.pipe';
+
 
 
 @Component({
   selector: 'app-tasks',
   standalone:true,
-  imports:[IonAccordion,IonAccordionGroup,IonItem,IonLabel,IonText,IonNote,IonIcon,IonList,IonInfiniteScroll,IonInfiniteScrollContent,IonContent,CommonModule],
+  imports:[IonAccordion,IonAccordionGroup,IonItem,IonLabel,IonText,IonNote,IonIcon,IonList,IonInfiniteScroll,IonInfiniteScrollContent,IonContent,EllipsisPipe,CommonModule],
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.scss'],
 })
